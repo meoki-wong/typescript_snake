@@ -1,0 +1,96 @@
+
+@bg-color: #b7b7a8;
+
+body{
+    background-color:lightblue;
+    display: flex;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+
+/* 主窗口样式 */
+
+
+#main{
+    width: 360px;
+    height: 420px;
+    background-color: @bg-color;
+    margin: 100px auto;
+    border: 10px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    #stage{
+        width: 304px;
+        height: 304px;
+        border: 2px solid;
+        position: relative;
+        #snake{
+            &>div{
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+                border: 1px solid @bg-color;
+                position: absolute;
+            }
+        }
+        &>#food{
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border: 1px solid @bg-color;
+            position: absolute;
+            left: 40px;
+            top: 100px;
+        }
+    }
+    /* 游戏记分牌 */
+    #score-panel{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.option-btn{
+    margin: 100px auto;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    &>div{
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        position: absolute;
+    }
+    .down{
+        bottom: 0;
+        left: 50%;
+        margin-left: -15px;
+    }
+    .left{
+        left: 0;
+        top: 50%;
+        margin-top: -15px;
+    }
+    .right{
+        right: 0;
+        top: 50%;
+        margin-top: -15px;
+    }
+    .top{
+        top: 0;
+        left: 50%;
+        margin-left: -15px;
+    }
+}
